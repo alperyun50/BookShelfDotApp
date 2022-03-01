@@ -1,0 +1,33 @@
+﻿@model List<BookShelfDotApp.Models.Books>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<script src="~/twitter-bootstrap/js/bootstrap.js"></script>
+
+<h1>Kitaplar</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <td>ID</td>
+        <td>Kitap Adı</td>
+        <td>Yazar</td>
+    </tr>
+    @foreach (var bk in Model)
+    {
+        <tr>
+            <td>@bk.Id</td>
+            <td>@bk.BookName</td>
+            <td>@bk.Author</td>
+        </tr>
+    }
+</table>
+
+<h2>Gelecek kitaplar</h2>
+@await Component.InvokeAsync("NewBooks")
+<br />
+
+@Html.Partial("_PartialPage")

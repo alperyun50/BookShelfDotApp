@@ -1,0 +1,18 @@
+﻿@model IEnumerable<BookShelfDotApp.Models.Books>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>AD</th>
+        <th>YAZAR</th>
+    </tr>
+    @foreach(var bk in Model)
+            {
+                <tr>
+                    <th>@bk.Id</th>
+                    <th>@bk.BookName</th>
+                    <th>@bk.Author</th>
+                </tr>
+            }
+</table>
+
