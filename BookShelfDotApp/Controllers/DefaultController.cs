@@ -22,5 +22,15 @@ namespace BookShelfDotApp.Controllers
             
             return View(bk);
         }
+
+        public IActionResult Deneme()
+        {
+            return View();
+        }
+
+        public IActionResult StaticThema()
+        {
+            return View();
+        }
     }
 }
